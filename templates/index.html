@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Home Page</title>
+</head>
+
+<body>
+    <h1>Loading</h1>
+    <div>
+        {{m|safe}}
+    </div>
+    <div>
+        <form class="form-inline my-2 my-lg-0" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <button class="btn btn-outline-success my-2 my-sm-0 mx-3" type="submit">Search</button>
+        </form>
+    </div>
+</body>
+
+</html>

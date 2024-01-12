@@ -1,0 +1,80 @@
+0 Art Gallery
+1 Art Museum
+2 Arts & Entertainment
+3 Athletics & Sports
+4 Auditorium
+5 Bar
+6 Basketball Court
+7 Beer Garden
+8 Brewery
+9 Bridge
+10 Cafe
+11 Cemetery
+12 Church
+13 Cocktail Bar
+14 Comedy Club
+15 Concert Hall
+16 Dance Studio
+17 Event Space
+18 Farm
+19 French Restaurant
+20 Garden
+21 Gay Bar
+22 General Entertainment
+23 Golf Course
+24 Gym Pool
+25 Harbor
+26 Historic Site
+27 History Museum
+28 Hostel
+29 Hotel Bar
+30 Hotel
+31 Indie Movie Theater
+32 Internet Cafe
+33 Island
+34 Italian Restaurant
+35 Lake
+36 Lounge
+37 Miscellaneous Shop
+38 Mosque
+39 Movie Theater
+40 Multiplex
+41 Museum
+42 Music Venue
+43 Neighborhood
+44 Office
+45 Opera House
+46 Other Great Outdoors
+47 Other Nightlife
+48 Park
+49 Performing Arts Venue
+50 Nightclub
+51 Pizza Place
+52 Planetarium
+53 Playground
+54 Plaza
+55 Pool
+56 Pub
+57 Public Art
+58 Racetrack
+59 Radio Station
+60 River
+61 Rock Club
+62 Scenic Lookout
+63 Soccer Field
+64 Soccer Stadium
+65 Spiritual Center
+66 Sports Bar
+67 Stadium
+68 Strip Club
+69 Synagogue
+70 Temple
+71 Tennis Court
+72 Tennis
+73 Theater
+74 Theme Park
+75 Track Stadium
+76 Trail
+77 Vineyard
+78 Wine Bar
+79 Zoo

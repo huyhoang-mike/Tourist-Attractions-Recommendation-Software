@@ -1,0 +1,225 @@
+input {
+    caret-color: white;
+}
+
+.language {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+}
+
+.pos{
+    position: fixed;
+    top: 450px;
+    left: 200px;
+}
+
+.title {
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    color: white;
+    font-size: x-large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.para {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    color: white;
+    font-size: medium;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    /* align-items: center; */
+    /* background: black; */
+    font-weight: 900;
+}
+
+.box {
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 30px;
+    align-items: center;
+    /* box-shadow: 0 10px 25px grey; */
+    font-weight: 900;
+    font-size: large;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    background-position: center;
+    background-size: cover;
+}
+
+.search-bar{
+    position: fixed;
+    top: 170px;
+    left: 40px;
+    width: 500px;
+    max-width: 700px;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    border-radius: 60px;
+    padding: 10px 20px;
+    font-weight: 900;
+    font-size: large;
+}
+
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    color: white;
+    font-weight: 900;
+    font-size: large;
+}
+
+::placeholder{
+    color: white;
+    font-weight: 900;
+    font-size: large;
+}
+
+.search-bar button img{
+    width: 25px;
+}
+
+.search-bar button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #9ea4c4;
+    cursor: pointer;
+}
+
+.upload-bar{
+    position: fixed;
+    top: 300px;
+    left: 40px;
+    width: 500px;
+    max-width: 700px;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    border-radius: 60px;
+    padding: 10px 20px;
+    font-weight: 900;
+    font-size: large;
+}
+
+.upload-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    color: white;
+    font-weight: 900;
+    font-size: large;
+}
+
+.upload-bar button img{
+    width: 25px;
+}
+
+.upload-bar button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #9ea4c4;
+    cursor: pointer;
+}
+
+button{
+    position: relative;
+    border: 0;
+    display: inline-block;
+    width: 12rem;
+    height: auto;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+}
+
+.text{
+    position: absolute;
+    inset: 0;
+    padding: 0.9rem 0;
+    margin-left: 1.85rem;
+    color: white;
+    line-height: 1.6;
+    text-align: center;
+    transition: all 0.4s ease;
+    font-weight: 900;
+}
+
+.circle{
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #58629b;
+    border-radius: 1.625rem;
+    transition: all 0.4s ease;
+}
+
+.icon{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #58629b;
+}
+
+.arrow{
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none; 
+    transition: all 0.4s ease;   
+}
+
+.arrow::before{
+    content: "";
+    position: absolute;
+    top: -0.3rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid white;
+    border-right: 0.125rem solid white;    
+    transform: rotate(45deg);
+}
+
+button:hover .circle{
+    width: 100%;
+}
+
+button:hover .arrow{
+    background: white;
+    transform: translateX(1rem);
+}
+
+button:hover .text{
+    color: white;
+}

@@ -1,0 +1,140 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
+<style>
+	* {
+    /* Change your font family */
+    font-family: 'Brush Script MT', cursive;
+	}
+
+    .navbar {
+		height: 12%;
+		display: flex;
+		align-items: center;
+		padding-right: 5%;
+        padding-top: 2%;
+	}
+
+	nav {
+		flex: 1;
+		text-align: center;
+	}
+
+	nav a {
+		text-decoration: none;
+		color: blue;
+	}
+
+    .container {
+        padding-top: 4%;
+    }
+
+	.center {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.content-table {
+		margin-left: 0%;
+		margin-right: auto;
+		border-collapse: collapse;
+		font-size: 0.9em;
+		min-width: 400px;
+		border-radius: 5px 5px 0 0;
+		overflow: hidden;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	}
+
+	.content-table thead tr {
+		background-color: #009879;
+		color: #ffffff;
+		text-align: left;
+		font-weight: bold;
+        font-size: x-large;
+	}
+
+	.content-table th,
+	.content-table td {
+		padding: 12px 15px;
+	}
+
+	.content-table tbody tr {
+		border-bottom: 1px solid #dddddd;
+        font-size: large;
+        text-align: center;
+	}
+
+	.content-table tbody tr:nth-of-type(even) {
+		background-color: #f3f3f3;
+	}
+
+	.content-table tbody tr:last-of-type {
+		border-bottom: 2px solid #009879;
+	}
+
+	.content-table tbody tr.active-row {
+		font-weight: bold;
+		color: #000000;
+	}
+
+    h3 {
+        font-size: 33px;
+    }
+    a {
+        text-decoration: none; 
+    }
+
+	</style>
+<body>
+    <div class="container">
+        {% if post %}
+            <h1>Great! We've found that your favorite kind of place is {{get_result}}</h1>
+            <br>
+                <h2> - We recommend you visit these attractions below. </h2>
+                <br>
+                <h2> - Just simply find the best place. Don't forget to type the name on our <a href="{% url 'Home' %}">HOMEPAGE</a> 
+                    to find the nearest place simultaneously.</h2>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h3 style="text-align:left; color: #009879; size: 2rem;"> LIST OF YOUR FAVORITE ATTRATIONS </h3>
+                <br>
+                <table class="content-table">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Caregory</th>
+                        <th>Popularity</th>
+                        <th>Number of Reviews</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+            {% for i in post %}
+                      <tr>
+                        <td style="text-align: left;">{{i.name}}</td>
+                        <td style="text-align: left;">{{i.address}}</td>
+                        <td>{{i.subCategory}}</td>
+                        <td>{{i.popularity}}</td>
+                        <td>{{i.numReviews}}</td>             
+                    </tr>
+            {% endfor %} 
+                    </tbody>
+                  </table>
+        {% else %}
+            <h1>Nothing found</h1>
+        {% endif %}
+    </div>
+</body>
+
+</html>
