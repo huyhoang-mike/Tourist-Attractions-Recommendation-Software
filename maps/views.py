@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Location, Paris
-from .function import dist, findSimilar
+from .function import dist
 import pandas as pd 
 import os
 
