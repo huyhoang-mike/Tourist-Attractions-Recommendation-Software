@@ -7,7 +7,7 @@ Use the package manager [pip](https://pypi.org/project/pip/) to install the soft
 pip install -r requirements.txt
 ```
 ## USAGE
-Firstly, you need to clone this repository into your local machine.
+Firstly, you need to clone this [repository]([https://pypi.org/project/pip/](https://github.com/huyhoang-mike/Tourist-Attractions-Recommendation-Software))into your local machine.
 ```
 git clone https://github.com/huyhoang-mike/Tourist-Attractions-Recommendation-Software
 ```
