@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import Location, Paris
-from geopy.geocoders import Nominatim
 from .function import dist, findSimilar
 import pandas as pd 
 import os
