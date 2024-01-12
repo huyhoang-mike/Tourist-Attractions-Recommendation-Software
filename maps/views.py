@@ -74,24 +74,13 @@ def rec(request):
             index = np.argmax(prediction)
             class_name = class_names[index]
             get_result = str(class_name[2:])
-            length = len(get_result)
-            place_list = 'Bar' 
-            length_true = len(place_list)
-            object = Paris.objects.all()
-            post = Paris.objects.all().filter(subCategory=place_list)
-            # for p in object:
-            #     if p.subCategory == get_result:
-            #         place_list = p.name
+            post = Paris.objects.all().filter(subCategory=get_result)
         context = {
         'file_name': file_name,
         'file_url': file_url,
         'dir': dir,
         'get_result': get_result,
-        'place_list': place_list,
-        'object': object,
         'post': post,
-        'length': length,
-        'length_true': length_true,
         }
         return render(request, "rec.html", context)
     else:
