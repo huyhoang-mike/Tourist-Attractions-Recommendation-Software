@@ -16,3 +16,6 @@ Secondly, run the code below to run the local server.
 python manage.py runserver
 ```
 ## DEMO
+
+https://github.com/huyhoang-mike/Tourist-Attractions-Recommendation-Software/assets/109945762/4f6b419d-a0d4-48e1-80a9-8db27b1cbb6d
+
