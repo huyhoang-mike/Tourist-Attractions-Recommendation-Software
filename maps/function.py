@@ -10,3 +10,5 @@ def dist(lat1, long1, lat2, long2):
     c = 2 * np.arctan2(np.sqrt(a), np.sqrt(1-a))
     return float("{:.2f}".format(R * c))
 
+def remove_first_end_spaces(string):
+    return "".join(string.rstrip().lstrip())

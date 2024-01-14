@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Location, Paris
-from .function import dist
+from .function import dist, remove_first_end_spaces
 import pandas as pd 
 import os
 
@@ -56,24 +56,26 @@ def rec(request):
         class_names = open("labels.txt", "r").readlines()
         data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
         for file in os.listdir(dir):
-            img_file = os.path.join('.','media', file)
-            # Replace this with the path to your image
-            image = Image.open(img_file).convert("RGB")
-            # resizing the image to be at least 224x224 and then cropping from the center
-            size = (224, 224)
-            image = ImageOps.fit(image, size, Image.Resampling.LANCZOS)
-            # turn the image into a numpy array
-            image_array = np.asarray(image)
-            # Normalize the image
-            normalized_image_array = (image_array.astype(np.float32) / 127.5) - 1
-            # Load the image into the array
-            data[0] = normalized_image_array
-            # Predicts the model
-            prediction = model.predict(data)
-            index = np.argmax(prediction)
-            class_name = class_names[index]
-            get_result = str(class_name[2:])
-            post = Paris.objects.all().filter(subCategory=get_result)
+            if file == file_name:
+                img_file = os.path.join('.','media', file)
+                # Replace this with the path to your image
+                image = Image.open(img_file).convert("RGB")
+                # resizing the image to be at least 224x224 and then cropping from the center
+                size = (224, 224)
+                image = ImageOps.fit(image, size, Image.Resampling.LANCZOS)
+                # turn the image into a numpy array
+                image_array = np.asarray(image)
+                # Normalize the image
+                normalized_image_array = (image_array.astype(np.float32) / 127.5) - 1
+                # Load the image into the array
+                data[0] = normalized_image_array
+                # Predicts the model
+                prediction = model.predict(data)
+                index = np.argmax(prediction)
+                class_name = class_names[index]
+                get_result = str(class_name[2:])
+                get_result = remove_first_end_spaces(get_result)
+                post = Paris.objects.all().filter(subCategory=get_result)
         context = {
         'file_name': file_name,
         'file_url': file_url,
