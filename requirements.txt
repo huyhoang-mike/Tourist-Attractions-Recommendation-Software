@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Django==4.2.7
 keras==2.14.0
 numpy==1.25.0
@@ -7,13 +6,3 @@ Pillow==10.0.0
 Requests==2.31.0
 json5==0.9.14
 
-=======
-Django==4.2.7
-keras==2.14.0
-numpy==1.25.0
-pandas==2.1.4
-Pillow==10.0.0
-Requests==2.31.0
-json5==0.9.14
-
->>>>>>> eb9b198507209f6590826557bae39e756a18316a
